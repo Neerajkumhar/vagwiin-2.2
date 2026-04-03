@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-primary text-accent-dark overflow-x-hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
