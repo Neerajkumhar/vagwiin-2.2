@@ -38,7 +38,7 @@ const Navbar = () => {
             <div className="p-1 rounded-lg flex items-center justify-center bg-accent-blue/10 group-hover:bg-accent-blue/20 transition-colors">
               <img src="/favicon.ico" alt="Vagwiin Logo" className="h-8 w-8" />
             </div>
-            <span className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors hidden sm:inline ${scrolled || isOpen ? 'text-accent-dark' : 'text-accent-dark'}`}>
+            <span className={`text-sm sm:text-xl md:text-2xl font-bold tracking-tight transition-colors inline ${scrolled || isOpen ? 'text-accent-dark' : 'text-accent-dark'}`}>
               Vagwiin
             </span>
           </Link>
