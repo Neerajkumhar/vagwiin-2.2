@@ -10,7 +10,7 @@ const ContactPage = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-500/10 blur-3xl rounded-full" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,14 +26,14 @@ const ContactPage = () => {
 
       {/* Main Contact Form & Details Section */}
       <div className="-mt-16 relative z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="w-full px-4 sm:px-6 lg:px-8 mb-24">
           <Contact />
         </div>
       </div>
       
       {/* Additional Supporting Section */}
       <section className="py-16 bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-10 text-center">
             <div>
               <h3 className="text-xl font-bold text-accent-dark mb-3">Global Headquarters</h3>

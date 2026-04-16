@@ -4,7 +4,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-28 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section id="home" className="relative pt-16 lg:pt-20 pb-20 lg:pb-32 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-white" />
@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="absolute top-1/2 -left-24 w-72 h-72 bg-blue-400/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,3 +97,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

@@ -1,61 +1,63 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Network, Phone, Video, Server, Database, ShieldAlert, Flame, MonitorPlay, Cpu } from 'lucide-react';
+import { Network, Zap, Camera, Building2, UtensilsCrossed, Heart, Package, Headphones } from 'lucide-react';
 
 const detailedServices = [
   {
-    title: 'Structured Cabling System',
-    description: 'High-performance structured cabling systems for reliable data transmission and network infrastructure. We ensure pristine cable management and certified connectivity for future-proof bandwidth.',
+    title: 'IT Infrastructure',
+    description: 'Scalable and secure enterprise networking and data solutions designed to support your growing business needs. We provide comprehensive data center setup, robust network infrastructure, high-performance server and storage solutions, seamless cloud integration, and extensive support for all your IT infrastructure requirements.',
     icon: Network,
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop',
+    features: ['Data Center Setup', 'Network Infrastructure', 'Server & Storage Configuration', 'Cloud Integration']
   },
   {
-    title: 'Unified Communication System',
-    description: 'Integrate voice, video, and data communication channels to streamline collaboration. Connect your teams across the globe with encrypted, low-latency, and high-fidelity enterprise SIP solutions.',
-    icon: Phone,
-    image: 'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=2069&auto=format&fit=crop'
-  },
-  {
-    title: 'Telepresence & Collaboration',
-    description: 'Immersive video conferencing and telepresence solutions for seamless remote team collaboration. We design acoustic and visually optimized conference rooms for top-tier executives.',
-    icon: Video,
-    image: 'https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?q=80&w=2069&auto=format&fit=crop'
-  },
-  {
-    title: 'Enterprise Network',
-    description: 'Scalable and secure enterprise networking solutions including high-throughput routing, switching, and dense wireless (Wi-Fi 6E) environments tailored for large campuses.',
-    icon: Server,
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop'
-  },
-  {
-    title: 'Server & Storage',
-    description: 'Robust server and data storage solutions engineered for performance, reliability, and security. Featuring all-flash SANs, hyper-converged infrastructure (HCI), and redundant failovers.',
-    icon: Database,
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop'
+    title: 'Automation & Smart Solutions',
+    description: 'Intelligent systems for building control and urban environments that streamline operations and enhance efficiency. Our solutions include smart building automation, cutting-edge IoT implementations, smart city infrastructure, and comprehensive surveillance systems tailored to modern enterprise needs.',
+    icon: Zap,
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
+    features: ['Building Automation', 'Smart City Solutions', 'IoT Implementation', 'Intelligent Control Systems']
   },
   {
     title: 'Security & Surveillance',
-    description: 'Comprehensive IP CCTV, biometric access control, perimeter intrusion, and physical security solutions for enterprise protection. View feeds dynamically from a centralized SOC.',
-    icon: ShieldAlert,
-    image: 'https://aegistechnologies.com/wp-content/uploads/2019/04/security-surveillance-1024x683.jpg'
+    description: 'Comprehensive physical security and monitoring solutions to protect your assets and ensure organizational safety. We deploy advanced IP CCTV systems, biometric access controls, perimeter security solutions, and 24/7 surveillance capabilities managed from centralized security operations centers.',
+    icon: Camera,
+    image: '/public/security.jpg',
+    features: ['IP CCTV Systems', 'Biometric Access Control', 'Perimeter Security', '24/7 Monitoring']
   },
   {
-    title: 'Fire & Safety System',
-    description: 'Advanced fire detection, suppression, and safety alarm systems to ensure complete workplace hazard protection according strictly to international safety compliances.',
-    icon: Flame,
-    image: 'https://resources.impactfireservices.com/hubfs/Blog%20Images/Blog_why-invest-in-advanced-fire-protection-systems.jpg'
+    title: 'Construction & Infrastructure',
+    description: 'End-to-end civil, electrical, and interior solutions for enterprise projects. From initial civil construction and electrical & MEP implementations to sophisticated interior fit-outs and comprehensive project management, we handle every aspect of your infrastructure development with precision and expertise.',
+    icon: Building2,
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
+    features: ['Civil Construction', 'Electrical & MEP', 'Interior Fit-out', 'Project Management']
   },
   {
-    title: 'Audio Visual System',
-    description: 'State-of-the-art AV solutions for auditoriums, meeting rooms, digital signage, and public address systems. We integrate the finest visual displays and acoustic soundscapes.',
-    icon: MonitorPlay,
-    image: 'https://utglobal.com/wp-content/uploads/2020/02/av.jpg'
+    title: 'Food & Catering Services',
+    description: 'Professional hospitality and canteen management solutions for corporate environments. We provide complete canteen management, corporate cafeteria operations, bulk catering services, and efficient food supply chain management to keep your workforce nourished and productive.',
+    icon: UtensilsCrossed,
+    image: 'https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=2070&auto=format&fit=crop',
+    features: ['Canteen Management', 'Corporate Cafeteria Operations', 'Bulk Catering', 'Supply Chain Management']
   },
   {
-    title: 'Building Automation System',
-    description: 'Intelligent building management systems for energy efficiency and operational control. Command lighting, HVAC, and power resources through a centralized AI-driven dashboard.',
-    icon: Cpu,
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop'
+    title: 'CSR & Social Projects',
+    description: 'Meaningful initiatives focused on community and environmental impact. We partner with enterprises to create lasting social value through strategic CSR planning, community development programs, educational and health technology initiatives, and environmentally sustainable projects.',
+    icon: Heart,
+    image: 'public/csr.jpg',
+    features: ['CSR Planning & Strategy', 'Community Programs', 'Edu/Health Tech Solutions', 'Environmental Projects']
+  },
+  {
+    title: 'Bulk Supply & Procurement',
+    description: 'Efficient sourcing and procurement solutions for enterprise equipment and materials at scale. We streamline the procurement process for IT equipment, office furniture, electrical items, construction materials, and more – delivering quality products with cost optimization.',
+    icon: Package,
+    image: 'public/supply.jpg',
+    features: ['IT Equipment Sourcing', 'Office Furniture', 'Electrical Items', 'Construction Materials']
+  },
+  {
+    title: 'Consulting & Support',
+    description: 'Technical expertise and round-the-clock infrastructure support to keep your operations running smoothly. Our consulting team provides strategic technical guidance, vendor management, 24/7 dedicated support, and comprehensive Annual Maintenance Contracts (AMC) for peace of mind.',
+    icon: Headphones,
+    image: '/public/consulting.jpg',
+    features: ['Technical Consulting', 'Vendor Management', '24/7 Support', 'AMC/Maintenance Services']
   }
 ];
 
@@ -67,7 +69,7 @@ const ServicesPage = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-500/10 blur-3xl rounded-full" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="text-center max-w-3xl mx-auto leading-relaxed">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,14 +77,14 @@ const ServicesPage = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Explore our premium IT hardware capabilities. We integrate state-of-the-art physical infrastructure with intelligent digital control to empower your enterprise.
+              Comprehensive enterprise solutions spanning IT infrastructure, construction, automation, catering, and more. We integrate expertise across diverse sectors to empower your business.
             </p>
           </motion.div>
         </div>
       </div>
 
       {/* Services Detailed List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 space-y-24">
+      <div className="w-full px-4 sm:px-6 lg:px-8 mt-16 space-y-24">
         {detailedServices.map((service, index) => {
           const Icon = service.icon;
           const isEven = index % 2 === 0;
@@ -127,11 +129,7 @@ const ServicesPage = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-4 mb-8">
-                  {[
-                    `Professional ${service.title.split(' ')[0]} Installation`,
-                    'Enterprise Grade Hardware Integration',
-                    '24/7 Priority Support & Maintenance'
-                  ].map((feature, i) => (
+                  {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-accent-dark font-medium">
                       <div className="w-2 h-2 rounded-full bg-accent-blue" />
                       {feature}
@@ -155,10 +153,10 @@ const ServicesPage = () => {
 
       {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-accent-blue to-blue-800 py-20 mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to upgrade your infrastructure?</h2>
+        <div className="w-full px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your enterprise?</h2>
           <p className="text-blue-100 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
-            Partner with Vagwiin to harness seamless technology scaling, top-tier security, and state-of-the-art physical networking.
+            Partner with Vagwiin for comprehensive solutions across IT infrastructure, construction, automation, catering, and consulting. Let us handle your business transformation.
           </p>
           <a
             href="/contact"

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,19 +22,23 @@ const Navbar = () => {
     { name: 'About', href: '/about' },
   ];
 
+  const isActive = (href) => {
+    return location.pathname === href;
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled || isOpen ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 group" onClick={() => setIsOpen(false)}>
+          <Link to="/" className="flex items-center gap-2 group flex-shrink-0" onClick={() => setIsOpen(false)}>
             <div className="p-1 rounded-lg flex items-center justify-center bg-accent-blue/10 group-hover:bg-accent-blue/20 transition-colors">
               <img src="/favicon.ico" alt="Vagwiin Logo" className="h-8 w-8" />
             </div>
-            <span className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors ${scrolled || isOpen ? 'text-accent-dark' : 'text-accent-dark'}`}>
+            <span className={`text-xl sm:text-2xl font-bold tracking-tight transition-colors hidden sm:inline ${scrolled || isOpen ? 'text-accent-dark' : 'text-accent-dark'}`}>
               Vagwiin
             </span>
           </Link>
@@ -44,9 +49,16 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-gray-600 hover:text-accent-blue font-medium transition-colors"
+                className={`font-medium transition-colors relative ${
+                  isActive(link.href)
+                    ? 'text-accent-blue'
+                    : 'text-gray-600 hover:text-accent-blue'
+                }`}
               >
                 {link.name}
+                {isActive(link.href) && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-blue rounded-full" />
+                )}
               </Link>
             ))}
             <Link
@@ -58,7 +70,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center flex-shrink-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-accent-blue focus:outline-none transition-colors p-2 rounded-lg hover:bg-gray-100"
@@ -76,24 +88,29 @@ const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+          transition={{ duration: 0.2 }}
+          className="md:hidden fixed top-full left-0 right-0 bg-white border-b border-gray-100 overflow-hidden shadow-lg"
         >
-          <div className="px-4 py-6 space-y-4">
+          <div className="w-full px-4 py-6 space-y-3 max-h-[calc(100vh-80px)] overflow-y-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-lg font-medium text-gray-700 hover:text-accent-blue hover:bg-blue-50 rounded-xl transition-all"
+                className={`block px-4 py-3 text-base font-medium rounded-lg transition-all ${
+                  isActive(link.href)
+                    ? 'text-white bg-accent-blue'
+                    : 'text-gray-700 hover:text-accent-blue hover:bg-blue-50'
+                }`}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 px-4">
+            <div className="pt-4 border-t border-gray-100">
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center bg-accent-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg active:scale-95"
+                className="block w-full text-center bg-accent-blue text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-md active:scale-95"
               >
                 Get a Quote
               </Link>

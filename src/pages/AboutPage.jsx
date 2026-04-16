@@ -11,7 +11,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 left-0 w-1/2 h-full bg-blue-500/10 blur-3xl rounded-full" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const AboutPage = () => {
 
       {/* Mission and Vision */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ const AboutPage = () => {
 
       {/* Core Values */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-accent-dark mb-16">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-10">
             <div className="space-y-4">
@@ -102,7 +102,7 @@ const AboutPage = () => {
       
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-accent-dark to-black py-20 mt-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <div className="w-full px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to work with the best?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg hover:text-white transition-colors duration-300">
             Reach out to our executive team to discover how our expertise can revolutionize your IT capabilities.
