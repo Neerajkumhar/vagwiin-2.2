@@ -21,7 +21,7 @@ const detailedServices = [
     title: 'Security & Surveillance',
     description: 'Comprehensive physical security and monitoring solutions to protect your assets and ensure organizational safety. We deploy advanced IP CCTV systems, biometric access controls, perimeter security solutions, and 24/7 surveillance capabilities managed from centralized security operations centers.',
     icon: Camera,
-    image: '/public/security.jpg',
+    image: '/security.jpg',
     features: ['IP CCTV Systems', 'Biometric Access Control', 'Perimeter Security', '24/7 Monitoring']
   },
   {
@@ -42,21 +42,21 @@ const detailedServices = [
     title: 'CSR & Social Projects',
     description: 'Meaningful initiatives focused on community and environmental impact. We partner with enterprises to create lasting social value through strategic CSR planning, community development programs, educational and health technology initiatives, and environmentally sustainable projects.',
     icon: Heart,
-    image: 'public/csr.jpg',
+    image: '/csr.jpg',
     features: ['CSR Planning & Strategy', 'Community Programs', 'Edu/Health Tech Solutions', 'Environmental Projects']
   },
   {
     title: 'Bulk Supply & Procurement',
     description: 'Efficient sourcing and procurement solutions for enterprise equipment and materials at scale. We streamline the procurement process for IT equipment, office furniture, electrical items, construction materials, and more – delivering quality products with cost optimization.',
     icon: Package,
-    image: 'public/supply.jpg',
+    image: '/supply.jpg',
     features: ['IT Equipment Sourcing', 'Office Furniture', 'Electrical Items', 'Construction Materials']
   },
   {
     title: 'Consulting & Support',
     description: 'Technical expertise and round-the-clock infrastructure support to keep your operations running smoothly. Our consulting team provides strategic technical guidance, vendor management, 24/7 dedicated support, and comprehensive Annual Maintenance Contracts (AMC) for peace of mind.',
     icon: Headphones,
-    image: '/public/consulting.jpg',
+    image: '/consulting.jpg',
     features: ['Technical Consulting', 'Vendor Management', '24/7 Support', 'AMC/Maintenance Services']
   }
 ];
