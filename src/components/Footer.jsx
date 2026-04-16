@@ -52,11 +52,14 @@ const Footer = () => {
             <h4 className="text-lg font-bold text-white mb-6">Core Services</h4>
             <ul className="space-y-4">
               {[
-                'Structured Cabling',
-                'Enterprise Networks',
-                'Server & Storage',
+                'IT Infrastructure',
+                'Automation & Smart Solutions',
                 'Security & Surveillance',
-                'AV Systems'
+                'Construction & Infrastructure',
+                'Food & Catering Services',
+                'CSR & Social Projects',
+                'Bulk Supply & Procurement',
+                'Consulting & Support'
               ].map((service, i) => (
                 <li key={i}>
                   <a href="/services" className="text-gray-400 hover:text-accent-blue transition-colors">

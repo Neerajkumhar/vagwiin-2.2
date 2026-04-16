@@ -4,7 +4,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative pt-16 lg:pt-20 pb-20 lg:pb-32 overflow-hidden">
+    <section id="home" className="relative mt-16 pt-16 lg:pt-20 pb-20 lg:pb-32 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-white" />

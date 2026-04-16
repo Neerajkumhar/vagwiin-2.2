@@ -124,7 +124,7 @@ const ServiceCard = ({ service, index }) => {
 
 const Services = () => {
   return (
-    <section id="services" className="relative py-24 bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
+    <section id="services" className="relative mt-8 py-24 bg-gradient-to-b from-white via-blue-50/30 to-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl animate-pulse" />

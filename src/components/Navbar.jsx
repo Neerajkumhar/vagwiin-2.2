@@ -28,8 +28,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled || isOpen ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
+      className={`fixed w-full z-50 transition-all duration-300 bg-white mb-10 ${
+        scrolled || isOpen ? 'backdrop-blur-md shadow-sm py-3' : 'py-5 shadow-sm'
       }`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">

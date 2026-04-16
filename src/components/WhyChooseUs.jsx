@@ -27,7 +27,7 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-br from-accent-dark via-slate-900 to-accent-dark text-white overflow-hidden">
+    <section className="relative mt-8 py-24 bg-gradient-to-br from-accent-dark via-slate-900 to-accent-dark text-white overflow-hidden">
       {/* Enhanced background effects */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-4xl animate-pulse" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-4xl animate-pulse" style={{ animationDelay: '1s' }} />
