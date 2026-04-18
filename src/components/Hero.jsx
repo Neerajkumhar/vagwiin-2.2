@@ -46,7 +46,7 @@ const Hero = () => {
               </a>
             </div>
 
-            <div className="mt-10 flex items-center gap-6 text-sm font-medium text-gray-500">
+            {/* <div className="mt-10 flex items-center gap-6 text-sm font-medium text-gray-500">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center overflow-hidden">
@@ -55,7 +55,7 @@ const Hero = () => {
                 ))}
               </div>
               <p>Trusted by Industry Leaders</p>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
