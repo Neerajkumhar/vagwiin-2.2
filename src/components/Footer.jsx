@@ -1,5 +1,11 @@
 import React from 'react';
-import { Share2, Globe, MessageCircle, ArrowRight } from 'lucide-react';
+import { Globe, MessageCircle, ArrowRight, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const SOCIAL_LINKS = [
+  { Icon: Globe, href: 'https://vagwiin.com', label: 'Visit the Vagwiin website' },
+  { Icon: MessageCircle, href: 'https://wa.me/919461991604', label: 'Chat with us on WhatsApp' },
+];
 
 const Footer = () => {
   return (
@@ -17,13 +23,17 @@ const Footer = () => {
               Empowering global enterprises with smart, scalable, and secure IT infrastructure hardware solutions.
             </p>
             <div className="flex items-center gap-4">
-              {[Share2, Globe, MessageCircle].map((Icon, i) => (
-                <a 
-                  key={i} 
-                  href="#" 
+              {SOCIAL_LINKS.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  title={label}
                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-accent-blue hover:text-white transition-all"
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-5 h-5" aria-hidden="true" />
                 </a>
               ))}
             </div>
@@ -93,9 +103,36 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Vagwiin. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
           </div>
+        </div>
+
+        <div className="pt-6 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-2 text-sm text-gray-500">
+          <p>
+            Designed &amp; Developed by{' '}
+            <a
+              href="https://visuark.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-accent-blue transition-colors font-medium"
+            >
+              Visuark
+            </a>
+          </p>
+          <p className="flex items-center gap-1.5">
+            Made with{' '}
+            <Heart className="w-4 h-4 text-red-500 fill-red-500" aria-hidden="true" />{' '}
+            by{' '}
+            <a
+              href="https://visuark.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-accent-blue transition-colors font-medium"
+            >
+              Visuark
+            </a>
+          </p>
         </div>
       </div>
     </footer>
